@@ -62,7 +62,6 @@ window.onload = () => {
             return;
         }
 
-        console.log("low" + low + "high" + high)
         priceFilter(low, high);
     });
 
@@ -266,14 +265,12 @@ window.onload = () => {
         let categoryPopup = $(".category-List");
 
         if (e.target.tagName == "svg") {
-            console.log("bbbbbbbbb" + e.target.tagName);
             return;
         }
 
         if (!categoryPopup && (!searchPopup || searchPopup[0].style.display === "none") && (!pricePopup || pricePopup[0].style.display === "none")) {
             return;
         }
-        console.log("aaaaaaa" + pricePopup[0]);
 
         if (pricePopup[0] && !pricePopup[0].contains(e.target)) {
             pricePopup.fadeOut("slow");

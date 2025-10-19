@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="product-summary" class="product-summary">
+
+    </div>
+    <div id="product-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product image</th>
+                    <th id="titleId">Product Name(Title)<svg id="titleDesc" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                        <svg id="titleAsc" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                        </svg>
+                        <svg id="search" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-1">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z" />
+                        </svg>
+                    </th>
+                    <th id="categoryId">Category <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-1">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z" />
+                        </svg>
+
+                    </th>
+                    <th id="priceId">Price <svg id="priceDesc" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                        <svg id="priceAsc" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-1">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                        </svg>
+                        <svg id="priceFilter" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke-width="1.5" stroke="currentColor" class="size-1">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 0 1-.659 1.591l-5.432 5.432a2.25 2.25 0 0 0-.659 1.591v2.927a2.25 2.25 0 0 1-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 0 0-.659-1.591L3.659 7.409A2.25 2.25 0 0 1 3 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0 1 12 3Z" />
+                        </svg>
+                    </th>
+                    <th>updatedAt</th>
+                </tr>
+            </thead>
+            <tbody id="product-table-body">
+                <!-- Product rows will be dynamically inserted here -->
+                <!-- <tr>
+                    <td><img src="https://i.imgur.com/QkIa5tT.jpeg" class="product"></td>
+                    <td>Classic Red Pullover Hoodie</td>
+                    <td><img src="https://i.imgur.com/QkIa5tT.jpeg" class="category"></td>
+                    <td>$10</td>
+                    <td>2025-10-17</td>
+                </tr> -->
+            </tbody>
+        </table>
+        <div id="priceFilterPopup" class="popup-menu" style="display: none;">
+            <h3>price-Filter</h3>
+            <div>
+                <input type="number" id="low" />&nbsp;～&nbsp;<input type="number" id="high" />
+            </div>
+            <div class="actions">
+                <button id="applyFilterButton" class="primary-button">apply</button>
+                <button id="clearFilterButton" class="secondary-button">clear</button>
+            </div>
+        </div>
+        <div id="searchPopup" class="popup-menu" style="display: none;">
+            <h3>search</h3>
+            <div>
+                <input type="text" id="searchTextId" />
+            </div>
+            <div class="actions">
+                <button id="searchButtonId" class="primary-button">search</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

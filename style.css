@@ -1,0 +1,93 @@
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        img.product {
+            width: 10rem;
+            height: auto;
+        }
+
+        img.category {
+            width: 2rem;
+            height: auto;
+        }
+
+        .product-summary {
+            display: flex;
+            flex-direction: row;
+            gap: 4rem;
+        }
+
+        .size-1 {
+            width: 15px;
+        }
+
+        .error {
+            color: red;
+            font-size: large;
+        }
+
+        #categoryId {
+            position: relative;
+        }
+
+        #categoryId ul {
+            position: absolute;
+
+            z-index: 1000;
+            top: 100%;
+            left: 0;
+            border: 1px solid #ccc;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-width: 150px;
+            list-style-type: none;
+
+            padding-left: 0;
+
+            margin: 0;
+        }
+
+        #categoryId>ul>li:hover {
+            /* ホバー時の背景色と文字色 */
+            background-color: #e74c3c;
+            /* 赤 */
+            color: #f1c40f;
+            /* 黄 */
+
+            /* マウスカーソルを変化させることで、クリック可能であることを示すことが多い */
+            cursor: pointer;
+        }
+
+        #priceId {
+            position: relative;
+        }
+        .popup-menu {
+
+            position: absolute;
+            top:5rem;
+            left:50rem;
+
+            z-index: 1000;
+
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            min-width: 250px;
+
+            display: none;
+        }

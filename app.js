@@ -259,4 +259,30 @@ window.onload = () => {
 
     }
 
+    //click handler
+    $(document).click((e) => {
+        let pricePopup = $("#priceFilterPopup");
+        let searchPopup = $("#searchPopup");
+        let categoryPopup = $(".category-List");
+
+        if (e.target.tagName == "svg") {
+            console.log("bbbbbbbbb" + e.target.tagName);
+            return;
+        }
+
+        if (!categoryPopup && (!searchPopup || searchPopup[0].style.display === "none") && (!pricePopup || pricePopup[0].style.display === "none")) {
+            return;
+        }
+        console.log("aaaaaaa" + pricePopup[0]);
+
+        if (pricePopup[0] && !pricePopup[0].contains(e.target)) {
+            pricePopup.fadeOut("slow");
+        }
+        if (searchPopup[0] && !searchPopup[0].contains(e.target)) {
+            searchPopup.fadeOut("slow");
+        }
+        if (categoryPopup[0] && !categoryPopup[0].contains(e.target)) {
+            categoryPopup.fadeOut("slow");
+        }
+    });
 }

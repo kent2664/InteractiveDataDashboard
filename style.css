@@ -56,18 +56,12 @@
             list-style-type: none;
 
             padding-left: 0;
-
             margin: 0;
         }
 
         #categoryId>ul>li:hover {
-            /* ホバー時の背景色と文字色 */
             background-color: #e74c3c;
-            /* 赤 */
             color: #f1c40f;
-            /* 黄 */
-
-            /* マウスカーソルを変化させることで、クリック可能であることを示すことが多い */
             cursor: pointer;
         }
 
